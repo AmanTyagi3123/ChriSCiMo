@@ -1,0 +1,93 @@
+.swiper{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper::after{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    height: 3px;
+    width: 200px;
+    content: '';
+    background: #ffffff;
+    z-index: 100;
+}
+
+.swiper .swiper-button-prev {
+    position: absolute;
+    left: 100px;
+    top: 80%;
+    width: 54px;
+    height: 54px;
+}
+
+.swiper .swiper-button-next {
+    position: absolute;
+    right: 86%;
+    top: 80%;
+    width: 54px;
+    height: 54px;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after{
+    font-size: 30px;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover{
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1440px) {
+    .swiper .swiper-button-prev{
+        left: 100px;
+    }
+
+    .swiper .swiper-button-next{
+        right: 84%;
+    }
+
+    .swiper::after{
+        left: 18%;
+        height: 2px;
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper .swiper-button-prev{
+        left: 15%;
+        top: 93%;
+    }
+
+    .swiper .swiper-button-next{
+        right: 55%;
+        top: 93%;
+    }
+
+    .swiper::after{
+        top: 93%;
+        left: 50%;
+        height: 2px;
+        width: 130px;
+    }
+}
+

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "EB Garamond";
+}
+
+p, li, a, button{
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+
+body{
+    background-color: #0c0c1d;
+    color: lightgray;
+}

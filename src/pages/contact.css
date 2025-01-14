@@ -1,0 +1,85 @@
+.contact{
+    bottom: 0;
+  color: lightgrey;
+  height: 100vh; /* Set height to 100vh for vertical centering */
+  max-width: 1366px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  align-items: center; /* Vertical centering within the container */
+  gap: 50px;
+}
+
+.textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1{
+        font-size: 50px;
+        line-height: 88px;
+    }
+    
+    span{
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+.formContainer{
+    flex: 1;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input, textarea{
+            padding: 15px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 20px;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contact{
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .textContainer{
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        margin-top: 70px;
+        
+        h1{
+            font-size: 30px;
+        }
+    }
+
+    .formContainer{
+        padding: 50px;
+        width: 100%;
+        
+        form{
+            input, textarea{
+                padding: 10px;
+            }
+            button{
+                padding: 10px;
+            }   
+        }
+    }
+}
