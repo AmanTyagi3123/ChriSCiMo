@@ -5,7 +5,7 @@ function Social() {
   return (
     <ul className="social">
         <li>
-            <a href="https://www.instagram.com/vaibhavvinayak47/profilecard/?igsh=bmY2ZXcxZ2FzdTA0"><i className='bi bi-instagram'></i></a>
+            <a href="https://www.instagram.com/vaibhavvinayak47/profilecard/?igsh=bmY2ZXcxZ2FzdTA0" target='_blank'><i className='bi bi-instagram'></i></a>
         </li>
     </ul>
   )

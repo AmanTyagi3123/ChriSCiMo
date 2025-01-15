@@ -8,28 +8,29 @@ import Sidebar from './components/Sidebar';
 import Contact from './pages/Contact'
 import Movies from './pages/Movies'
 import Scripts from './pages/Scripts';
+import GenerateData from './GenerateData';
+import GenerateMovieData from './GenerateMovieData';
 
 export const AppContext = React.createContext();
 
 function App() {
-  const [data, setData] = useState([])
-  const [movieData, setMovieData] = useState([])
-
-  const fetchData = () => {
-    fetch('http://localhost:4000/slides')
-    .then(res=>res.json())
-    .then(data => setData(data))
-    .catch(e => console.log(e.message))
-
-    fetch('http://localhost:5000/slides')
-    .then(res=>res.json())
-    .then(movieData => setMovieData(movieData))
-    .catch(e=>console.log(e.message))
-  };
+  const [data, setData] = useState([]); 
+  const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedData = await GenerateData();
+        const fetchedMovie = await GenerateMovieData();
+        setData(fetchedData); 
+        setMovieData(fetchedMovie);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
     fetchData();
-  },[]);
+  }, []);
 
   return (
     <>

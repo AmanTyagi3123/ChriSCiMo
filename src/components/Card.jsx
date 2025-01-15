@@ -6,7 +6,7 @@ function Card({slide}) {
     <div className="card">
         <div className="imgBox">
             <img src={slide.bgImg} alt="" />
-            <a href={slide.link}><i class="bi bi-play-fill"></i></a>
+            <a href={slide.link} target='_blank'><i class="bi bi-play-fill"></i></a>
         </div>
         <div className="details">
             <p>{slide.description}</p>
