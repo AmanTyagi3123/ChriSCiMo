@@ -17,7 +17,7 @@ const Sidebar = ( {children} ) => {
         <div className="container">
           <div className="grid navbar-grid">
             <div className="logo">
-              <h1 className='h1'>ChrisCiMo</h1>
+              <h1 className='h1'><NavLink to='/' className='h1'>ChrisCiMo</NavLink></h1>
             </div>
             <nav className={showMenu ? "menu-mobile" : "menu-web"}>
               <ul>

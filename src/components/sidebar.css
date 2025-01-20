@@ -1,7 +1,7 @@
 header{
     height: 8rem;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    background-color: #d4e6f1;
+    background-color: white;
     width: 100%;
 }
 
@@ -43,8 +43,7 @@ a{
     color: #000000;
 
     &:hover{
-        color: #2e86c1;
-        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.421)
     }
 }
 
